@@ -1,0 +1,20 @@
+﻿@page "/"
+@using AD.BlazorWasmStarter.Components
+
+<PageTitle>Home</PageTitle>
+
+<p class="mb-1">@password</p>
+
+<input type="type" class="form-control" @bind="password" @bind:event="oninput"/>
+
+<p class="mb-1 mt-3">@passwordLength</p>
+
+<input type="range" class="form-range" @bind="passwordLength" step="1" min="6" max="30"  @bind:event="oninput" />
+
+<MyButton></MyButton>
+
+@code{
+    private string password = "AydınDemir";
+    private int passwordLength = 6;
+    
+}
